@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { PhoneButton } from "@/components/phone-button";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -36,19 +37,26 @@ export default function Contact() {
               </div>
               <span className="text-xl font-bold">PlaqueXpress</span>
             </Link>
-            <div className="hidden md:flex items-center space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-black font-medium">
-                Home
-              </Link>
-              <Link href="/builder" className="text-gray-700 hover:text-black font-medium">
-                Build Your Plate
-              </Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-black font-medium">
-                How It Works
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-black font-medium">
-                Contact
-              </Link>
+            <div className="flex items-center gap-4">
+              {/* Mobile phone button (icon only) */}
+              <PhoneButton variant="accent" size="sm" showText={false} className="md:hidden" />
+
+              {/* Desktop navigation */}
+              <div className="hidden md:flex items-center space-x-6">
+                <Link href="/" className="text-gray-700 hover:text-black font-medium">
+                  Home
+                </Link>
+                <Link href="/builder" className="text-gray-700 hover:text-black font-medium">
+                  Build Your Plate
+                </Link>
+                <Link href="/how-it-works" className="text-gray-700 hover:text-black font-medium">
+                  How It Works
+                </Link>
+                <Link href="/contact" className="text-gray-700 hover:text-black font-medium">
+                  Contact
+                </Link>
+                <PhoneButton variant="accent" size="md" />
+              </div>
             </div>
           </div>
         </div>
@@ -98,9 +106,9 @@ export default function Contact() {
                       <Phone className="w-6 h-6 text-yellow-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-gray-600 text-sm">+230 5123 4567</p>
-                      <p className="text-gray-500 text-xs mt-1">
+                      <h3 className="font-semibold mb-2">Phone</h3>
+                      <PhoneButton variant="outline" size="sm" />
+                      <p className="text-gray-500 text-xs mt-2">
                         Available during business hours
                       </p>
                     </div>
@@ -377,10 +385,11 @@ export default function Contact() {
 
             <div>
               <h3 className="font-bold text-lg mb-4">Contact</h3>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-sm mb-4">
                 Mauritius & Rodrigues Island<br />
                 Production time: Up to 5 hours
               </p>
+              <PhoneButton variant="accent" size="sm" />
             </div>
           </div>
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ArrowLeft, ShoppingCart } from "lucide-react";
+import { PhoneButton } from "@/components/phone-button";
 
 type VehicleType = "car" | "motorcycle";
 type PlateType = "3d" | "vinyl";
@@ -71,13 +72,17 @@ export default function Builder() {
               </div>
               <span className="text-xl font-bold">PlaqueXpress</span>
             </Link>
-            <Link
-              href="/"
-              className="flex items-center space-x-2 text-gray-600 hover:text-black"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span>Back to Home</span>
-            </Link>
+            <div className="flex items-center gap-4">
+              <PhoneButton variant="accent" size="sm" showText={false} className="md:hidden" />
+              <PhoneButton variant="accent" size="md" className="hidden md:flex" />
+              <Link
+                href="/"
+                className="flex items-center space-x-2 text-gray-600 hover:text-black"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                <span className="hidden sm:inline">Back to Home</span>
+              </Link>
+            </div>
           </div>
         </div>
       </nav>

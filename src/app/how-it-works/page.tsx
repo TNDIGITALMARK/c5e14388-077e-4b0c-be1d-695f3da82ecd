@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CheckCircle, ArrowRight } from "lucide-react";
+import { PhoneButton } from "@/components/phone-button";
 
 export const dynamic = 'force-dynamic';
 
@@ -16,19 +17,26 @@ export default function HowItWorks() {
               </div>
               <span className="text-xl font-bold">PlaqueXpress</span>
             </Link>
-            <div className="hidden md:flex items-center space-x-6">
-              <Link href="/" className="text-gray-700 hover:text-black font-medium">
-                Home
-              </Link>
-              <Link href="/builder" className="text-gray-700 hover:text-black font-medium">
-                Build Your Plate
-              </Link>
-              <Link href="/how-it-works" className="text-gray-700 hover:text-black font-medium">
-                How It Works
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-black font-medium">
-                Contact
-              </Link>
+            <div className="flex items-center gap-4">
+              {/* Mobile phone button (icon only) */}
+              <PhoneButton variant="accent" size="sm" showText={false} className="md:hidden" />
+
+              {/* Desktop navigation */}
+              <div className="hidden md:flex items-center space-x-6">
+                <Link href="/" className="text-gray-700 hover:text-black font-medium">
+                  Home
+                </Link>
+                <Link href="/builder" className="text-gray-700 hover:text-black font-medium">
+                  Build Your Plate
+                </Link>
+                <Link href="/how-it-works" className="text-gray-700 hover:text-black font-medium">
+                  How It Works
+                </Link>
+                <Link href="/contact" className="text-gray-700 hover:text-black font-medium">
+                  Contact
+                </Link>
+                <PhoneButton variant="accent" size="md" />
+              </div>
             </div>
           </div>
         </div>
