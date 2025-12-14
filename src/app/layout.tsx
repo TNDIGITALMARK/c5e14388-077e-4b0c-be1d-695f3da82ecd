@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "PlaqueXpress - Legal Vehicle Number Plates",
+  description: "Order legal vehicle number plates online in Mauritius and Rodrigues Island. 3D Acrylic or Standard Vinyl plates ready in 5 hours.",
 };
 
 export default function RootLayout({
