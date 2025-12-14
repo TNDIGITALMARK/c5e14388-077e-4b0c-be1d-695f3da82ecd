@@ -123,7 +123,8 @@ export default function Home() {
                 <div className="p-8">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2">3D Acrylic Plates</h3>
-                    <p className="text-4xl font-bold text-yellow-600">Rs 1,200</p>
+                    <p className="text-4xl font-bold text-yellow-600">Rs 1,250</p>
+                    <p className="text-sm text-gray-600 mt-1">Includes heavy-duty tape</p>
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -141,7 +142,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Premium finish</span>
+                      <span className="text-gray-700">Heavy-duty double-sided tape</span>
                     </li>
                   </ul>
 
@@ -159,7 +160,8 @@ export default function Home() {
                 <div className="p-8">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2">Standard Vinyl Plates</h3>
-                    <p className="text-4xl font-bold text-yellow-600">Rs 800</p>
+                    <p className="text-4xl font-bold text-yellow-600">Rs 850</p>
+                    <p className="text-sm text-gray-600 mt-1">Includes heavy-duty tape</p>
                   </div>
 
                   <ul className="space-y-3 mb-8">
@@ -177,7 +179,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle2 className="w-5 h-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-700">Professional finish</span>
+                      <span className="text-gray-700">Heavy-duty double-sided tape</span>
                     </li>
                   </ul>
 
