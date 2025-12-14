@@ -21,7 +21,7 @@ export default function Builder() {
   const [mountingOption, setMountingOption] = useState<MountingOption>("holes");
 
   // Calculate price
-  const basePrice = plateType === "3d" ? 1500 : 800;
+  const basePrice = plateType === "3d" ? 1200 : 800;
   const mountingPrice = mountingOption === "tape" ? 50 : 0;
   const totalPrice = basePrice + mountingPrice;
 
@@ -169,7 +169,7 @@ export default function Builder() {
                           </p>
                         </div>
                         <p className="text-2xl font-bold text-yellow-600">
-                          Rs 1,500
+                          Rs 1,200
                         </p>
                       </div>
                     </button>

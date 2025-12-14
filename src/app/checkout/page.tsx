@@ -348,7 +348,7 @@ export default function Checkout() {
                   <div className="flex justify-between">
                     <span className="text-gray-600">Base Price:</span>
                     <span className="font-semibold">
-                      Rs {order.plateType === "3d" ? 1500 : 800}
+                      Rs {order.plateType === "3d" ? 1200 : 800}
                     </span>
                   </div>
                   {order.mountingOption === "tape" && (

@@ -84,7 +84,7 @@ export default function HowItWorks() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-                    <p className="font-bold mb-2">3D Acrylic - Rs 1,500</p>
+                    <p className="font-bold mb-2">3D Acrylic - Rs 1,200</p>
                     <ul className="space-y-1 text-sm text-gray-600">
                       <li className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-600" />

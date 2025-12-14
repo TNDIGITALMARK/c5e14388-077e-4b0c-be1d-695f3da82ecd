@@ -296,7 +296,7 @@ export default function Contact() {
                   What's the difference between 3D and Vinyl plates?
                 </h3>
                 <p className="text-gray-600">
-                  3D Acrylic plates have raised letters for a premium look (Rs 1,500),
+                  3D Acrylic plates have raised letters for a premium look (Rs 1,200),
                   while Standard Vinyl plates have flat letters (Rs 800). Both are fully
                   legal and made with quality Alucobond base material.
                 </p>

@@ -115,7 +115,7 @@ export default function Home() {
                 <div className="p-8">
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold mb-2">3D Acrylic Plates</h3>
-                    <p className="text-4xl font-bold text-yellow-600">Rs 1,500</p>
+                    <p className="text-4xl font-bold text-yellow-600">Rs 1,200</p>
                   </div>
 
                   <ul className="space-y-3 mb-8">
