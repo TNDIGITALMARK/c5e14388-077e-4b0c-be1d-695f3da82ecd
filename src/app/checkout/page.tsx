@@ -23,12 +23,49 @@ export default function Checkout() {
         Math.floor(Math.random() * 10000)
       ).padStart(4, "0")}`;
       setOrderNumber(orderNum);
+
+      // Save order to database and trigger notifications
+      saveOrderToDatabase(orderData, orderNum);
+
       setOrderComplete(true);
     } else {
       // Redirect to builder if no order
       router.push("/builder");
     }
   }, [router]);
+
+  async function saveOrderToDatabase(orderData: any, orderNum: string) {
+    try {
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          orderNumber: orderNum,
+          fullName: orderData.fullName,
+          phone: orderData.phone,
+          address: orderData.address,
+          plateNumber: orderData.plateNumber,
+          vehicleType: orderData.vehicleType,
+          plateType: orderData.plateType,
+          plateShape: orderData.plateShape,
+          dimensions: orderData.dimensions,
+          totalPrice: orderData.totalPrice,
+          additionalNotes: orderData.additionalNotes,
+          orderData: orderData
+        })
+      });
+
+      if (!response.ok) {
+        console.error('Failed to save order to database');
+      } else {
+        console.log('Order saved successfully and notifications sent');
+      }
+    } catch (error) {
+      console.error('Error saving order:', error);
+    }
+  }
 
   if (!order) {
     return (
